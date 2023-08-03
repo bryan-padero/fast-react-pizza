@@ -20,16 +20,17 @@ export async function getOrder(id) {
 
 export async function createOrder(newOrder) {
   try {
-    const res = await fetch(`${API_URL}/order`, {
+    const res = await fetch(`${API_URL}/order}`, {
       method: "POST",
       body: JSON.stringify(newOrder),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
+    console.log(res.json());
     if (!res.ok) throw Error();
     const { data } = await res.json();
+    console.log(data, "data API");
     return data;
   } catch {
     throw Error("Failed creating your order");

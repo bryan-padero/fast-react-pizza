@@ -21,13 +21,14 @@ function MenuItem({ pizza }) {
 
   function handleAddToCart() {
     const newItem = {
-      id: pizzaId,
+      pizzaId,
       name,
       quantity: 1,
       unitPrice,
       totalPrice: unitPrice * 1,
     };
     dispatch(addItem(newItem));
+    console.log(newItem);
   }
   return (
     <li className="flex gap-4 py-2">

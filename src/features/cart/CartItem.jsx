@@ -4,7 +4,6 @@ import UpdateItemQuantity from "./UpdateItemQuantity";
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
-  console.log(item);
 
   return (
     <li className="py-3 sm:flex sm:items-center sm:justify-between">

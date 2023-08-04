@@ -28,7 +28,6 @@ function MenuItem({ pizza }) {
       totalPrice: unitPrice * 1,
     };
     dispatch(addItem(newItem));
-    console.log(newItem);
   }
   return (
     <li className="flex gap-4 py-2">
